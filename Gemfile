@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
-# Annotate models 
+# div_for did not work in _post.html.erb, so require this gem
+gem 'record_tag_helper', '~> 1.0'
+# Annotate models
 gem 'annotate'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
@@ -22,6 +24,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+# add jquery as JavaScript library
+gem 'jquery-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
